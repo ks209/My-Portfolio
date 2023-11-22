@@ -1,0 +1,363 @@
+@import url('https://fonts.googleapis.com/css2?family=Averia+Sans+Libre:wght@300&family=Indie+Flower&family=Oswald:wght@600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Indie Flower', cursive;
+}
+
+@font-face {
+    font-family: 'matter';
+    src: url('./matter-light.woff2') format('woff2');
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+}
+
+#main{
+    width: 100%;
+}
+
+#home{
+    width: 100%;
+    min-height: 100vh;
+}
+
+#right a{
+    text-decoration: none;
+    color: black;
+    font-size: 1.3vw;
+    border: solid 1px black;
+    padding: 4px 20px;
+    /* padding-top: 8px; */
+    height: 3vw;
+    border-radius: 20px;
+    transition: 0.4s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#logo{
+    font-weight: bold;
+    letter-spacing: 4px;
+    font-family: 'Indie Flower';
+    font-size: calc(1.5vh + 1.5vw);
+    border: none;
+    text-decoration: none;
+    color: #121111;
+    /* border: 1px solid black; */
+    height: 15vh;
+    width: 15vw;
+}
+
+#nav{
+    width: 100%;
+    padding: 30px 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#right{
+    display: flex;
+    gap: 2vw;
+}
+
+#homemain{
+    width: 100%;
+    padding: 10vw 16vw;
+}
+
+#homemain h1{
+    font-family: 'matter', monospace;
+    font-weight: 900;
+    font-size: 1.1vw;
+    /* letter-spacing: ; */
+}
+
+#homemain #headings{
+    display: flex;
+    gap: 3vw;
+}
+
+#headings h1{
+    font-size: 6vw;
+    font-family: 'matter', sans-serif;
+    letter-spacing: -4px;
+    font-weight: 500;
+    line-height: 1;
+    color: transparent;
+    -webkit-text-stroke: 1px #121111;
+}
+
+#headings h1:hover{
+    color: #000;
+}
+
+/* .movercirc.blend{
+    filter: invert(0);
+} */
+/* 
+.movercirc video{
+    transform: translate(-50%,-50%) scale(0.5)
+} */
+
+#homelast{
+    padding: 0vw 15vw ;
+}
+
+#homelast p{
+    width: 70%;
+    line-height: 1.5;
+    letter-spacing: -.08vw;
+    font-weight: 400;
+    font-size: 1.5vw;
+    font-family: 'matter';
+}
+
+p::selection{
+    background-color: #121111;
+    color: #dadada;
+}
+
+h1::selection{
+    background-color: #121111;
+    color: #dadada;
+}
+
+a::selection{
+    background-color: #121111;
+    color: #dadada;
+}
+
+#feature{
+    padding: 5vw 12vw;
+}
+
+#featured h1{
+    font-family: "matter";
+    font-size: 3vw;
+    line-height: 1;
+    font-weight: 400;
+}
+
+#featured>h1:nth-child(2){
+    color: transparent;
+    -webkit-text-stroke: 1px #000;
+}
+
+#fimages{
+    width: 100%;
+    /* padding: 5vw 15vw;    */
+    display: flex;
+    justify-content: space-between;
+    /* height: 100vh; */
+    overflow: hidden;
+    margin-top: 5vw;
+}
+
+/* .images>img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+} */
+
+#fleft{
+    /* border: 1px solid blue; */
+    width: 45%;
+    height: inherit;
+    overflow: hidden;
+}
+
+#fright{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    /* border: 1px solid blue; */
+    width: 45%;
+    height: inherit;
+}
+
+.images{
+    width: 90%;
+    height: 80%;
+}
+
+.images img{
+    width: auto;
+    height: auto;
+    /* object-fit: contain; */
+}
+
+.lem{
+    width: 100%;
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.lem h1{
+    font-size: 2.5vw;
+    line-height: 1;
+    font-weight: 400;
+    text-transform: capitalize;
+    padding: 2vw 0;
+}
+
+.lem h3{
+    font-size: 2vw;
+}
+
+.lem h5{
+    opacity: 0.5;
+}
+
+#buttoncontainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10vh;
+}
+
+#buttoncontainer>a{
+    padding: 20px;
+    border-radius: 40px;
+    border: 1px solid black;
+    color: #000;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+.projects{
+    padding: 4vw;
+    background-color: black;
+    height: 110vh;
+}
+
+.projects h1{
+    padding: 4vw;
+    font-size: 3vw;
+    color: aliceblue;
+}
+
+.card-container{
+    display: flex;
+    gap: 4vw;
+    overflow: auto;
+    padding-bottom: 50px;
+}
+
+.container {
+    width: 400px;
+    height: 300px;
+    margin: 30px auto;
+    box-shadow: 0 0 2px gray;
+    padding: 20px;
+    overflow: scroll; 
+  }
+  
+  /* WebKit-based browsers */
+::-webkit-scrollbar {
+    width: 4px; /* Adjust scrollbar width */
+    height: 8px; /* Adjust scrollbar height for horizontal */
+    background-color: black; /* Background color of the scrollbar track */
+    position: absolute;
+    bottom: 0;
+  }
+  
+  /* Track (background of the scrollbar) */
+  ::-webkit-scrollbar-track {
+    background-color: black; /* Background color of the scrollbar track */
+  }
+  
+  /* Handle (thumb) */
+  ::-webkit-scrollbar-thumb {
+    background-color: white; /* Color of the scrollbar thumb */
+    border-radius: 10px; /* Round edges */
+    border: 2px solid black; /* Border around the thumb */
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #cccccc; /* Change color on hover */
+  }
+  
+
+.card{
+    background-color: #dadada;
+    width: 20vw;
+    border-radius: 10%;
+}
+
+.cardtext{
+    padding: 1vw;
+}
+
+.cardtext h4{
+    opacity: 0.5;
+}
+
+.cardimg{
+    height: 20vw;
+    width: 20vw;
+    background-color: #121111;
+}
+
+.foot{
+    padding-top: 10vh ;
+}
+
+.footupper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.socials{
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+    padding: 5vw 10vw;
+    gap:2vw;
+}
+
+.socials i{
+    font-size: 4.5vh;
+}
+
+.socials a{
+    color: #000;
+    text-decoration: none;
+    width: 8vh;
+    height: 8vh;
+    border-radius: 50%;
+    border: 1px solid black;
+    padding: 0.5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.socials a:hover{
+    color: white;
+    background-color: #000;
+}
+
+.socials i:hover{
+    color: white;
+}
+
+.c i{
+    /* width: 10px; */
+    padding: 0px 4px;
+}
+
+.c{
+    display: flex;
+    justify-content: center;
+
+}
