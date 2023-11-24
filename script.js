@@ -1,20 +1,19 @@
 Shery.mouseFollower();
 
-Shery.hoverWithMediaCircle(".target" /* Element to target.*/, {
-    images:["./k.jpg"," ", "https://img.freepik.com/premium-photo/colorful-abstract-background-with-lots-different-colored-shapes-colors-it-generative-ai_97167-9340.jpg", " "],
+Shery.hoverWithMediaCircle(".target" , {
+    images:["https://i.postimg.cc/QMYPc2MT/k.jpg"," ", "https://img.freepik.com/premium-photo/colorful-abstract-background-with-lots-different-colored-shapes-colors-it-generative-ai_97167-9340.jpg", " "],
   });
 
-  Shery.hoverWithMediaCircle(".target" /* Element to target.*/, {
-    // images:["./k.jpg"],
-    videos: [" ","./1.mp4", "", "3.mp4"]
+  Shery.hoverWithMediaCircle(".target" , {
+    videos: [" ","./images/1.mp4", "", "./images/3.mp4"]
   });
   
 
-  Shery.makeMagnet(".magnet")
+  Shery.makeMagnet(".magnet");
 
 
 
-  gsap.to(".lem",{
+  gsap.to("#fleft",{
     scrollTrigger:{
       trigger: "#fimages",
       pin: true,
@@ -23,8 +22,8 @@ Shery.hoverWithMediaCircle(".target" /* Element to target.*/, {
       endTrigger:".last",
       scrub: 1,
     },
-    y:"-300%",
-    ease: Power1
+    y:"-200%",
+    ease: Power1,
   });
 
   let section = document.querySelectorAll(".lem")
@@ -40,20 +39,14 @@ Shery.hoverWithMediaCircle(".target" /* Element to target.*/, {
           start: "top top",
           scrub: 1,
           onUpdate: function(prog){
-            setScroll(prog.progress*1.25 +index);
-            console.log(prog)
+            setScroll(prog.progress +index);
           }
         })
       })
     }
   })
 
-  Shery.textAnimate(".text-target", {
-    style: 1,
-    y: 60,
-    delay: 0.1,
-    duration: 0.8,
-    stagger: 0.3,
-  });
 
+
+  
     

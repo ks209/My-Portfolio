@@ -17,8 +17,23 @@ html, body{
     height: 100%;
 }
 
+#loader{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+}
+
+#loader h1{
+    font-size: 15vw;
+    color: #cccccc;
+}
+
 #main{
     width: 100%;
+    opacity: 1;
 }
 
 #home{
@@ -35,10 +50,29 @@ html, body{
     /* padding-top: 8px; */
     height: 3vw;
     border-radius: 20px;
-    transition: 0.4s ease-in-out;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.card a{
+    text-decoration: none;
+    color: black;
+    font-size: 1.3vw;
+    border: solid 1px black;
+    padding: 4px 20px;
+    padding-bottom: 0px;
+    /* padding-top: 8px; */
+    /* height: 3vw; */;
+    margin-bottom: 10px;
+    border-radius: 20px;
+}
+
+.cardimg img{
+    border-radius: 5%;
+    width: 100%;
+    max-height: 100%;
+    object-fit: cover;
 }
 
 #logo{
@@ -97,14 +131,6 @@ html, body{
     color: #000;
 }
 
-/* .movercirc.blend{
-    filter: invert(0);
-} */
-/* 
-.movercirc video{
-    transform: translate(-50%,-50%) scale(0.5)
-} */
-
 #homelast{
     padding: 0vw 15vw ;
 }
@@ -118,19 +144,33 @@ html, body{
     font-family: 'matter';
 }
 
-p::selection{
+h3::selection,::selection,a::selection,h2::selection,p::selection{
     background-color: #121111;
     color: #dadada;
 }
 
-h1::selection{
-    background-color: #121111;
-    color: #dadada;
+.tech{
+    padding: 8vw 11vw;
 }
 
-a::selection{
-    background-color: #121111;
-    color: #dadada;
+.techstack{
+    padding-top: 3vw;
+    display: flex;
+    gap: 3vw;
+    flex-wrap: wrap;
+}
+
+.tc{
+    width: 200px;
+    height: 60px;
+    display: flex;
+    gap: 1vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.tc svg{
+    font-size: 3vw;
 }
 
 #feature{
@@ -151,48 +191,40 @@ a::selection{
 
 #fimages{
     width: 100%;
-    /* padding: 5vw 15vw;    */
+    /* border: 1px solid black; */
     display: flex;
     justify-content: space-between;
-    /* height: 100vh; */
-    overflow: hidden;
+    height: 100vh;  
     margin-top: 5vw;
 }
 
-/* .images>img{
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-} */
 
 #fleft{
     /* border: 1px solid blue; */
     width: 45%;
     height: inherit;
-    overflow: hidden;
 }
 
 #fright{
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    /* border: 1px solid blue; */
-    width: 45%;
+    /* border: 1px solid green; */
+    width: 50%;
     height: inherit;
 }
 
 .images{
-    width: 90%;
-    height: 80%;
+    width: 100%;
 }
 
 .images img{
-    width: auto;
+    width: 90%;
     height: auto;
-    /* object-fit: contain; */
 }
 
 .lem{
+    /* border: 1px solid seagreen; */
     width: 100%;
     height: inherit;
     display: flex;
@@ -215,6 +247,10 @@ a::selection{
 .lem h5{
     opacity: 0.5;
 }
+/* 
+#pinterest{
+    object-fit: contain;
+} */
 
 #buttoncontainer{
     display: flex;
@@ -235,7 +271,7 @@ a::selection{
 .projects{
     padding: 4vw;
     background-color: black;
-    height: 110vh;
+    height: 105vh;
 }
 
 .projects h1{
@@ -247,7 +283,8 @@ a::selection{
 .card-container{
     display: flex;
     gap: 4vw;
-    overflow: auto;
+    overflow: hidden; 
+    /* *****Bhulna Mat******** */
     padding-bottom: 50px;
 }
 
@@ -269,7 +306,6 @@ a::selection{
     bottom: 0;
   }
   
-  /* Track (background of the scrollbar) */
   ::-webkit-scrollbar-track {
     background-color: black; /* Background color of the scrollbar track */
   }
@@ -290,7 +326,14 @@ a::selection{
 .card{
     background-color: #dadada;
     width: 20vw;
-    border-radius: 10%;
+    border-radius: 5%;
+}
+
+.cardbtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1vw;
 }
 
 .cardtext{
@@ -302,8 +345,11 @@ a::selection{
 }
 
 .cardimg{
+    border-radius: 10%;
     height: 20vw;
     width: 20vw;
+    display: flex;
+    align-items: center;
     background-color: #121111;
 }
 
