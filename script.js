@@ -1,6 +1,6 @@
 const videoUrls = [
-  './images/1.mp4',
-  './images/3.mp4',
+  './images/1short.mp4',
+  './images/3short.mp4'
 ];
 
 function preloadVideos(urls) {
@@ -16,17 +16,34 @@ preloadVideos(videoUrls);
 Shery.mouseFollower();
 
 Shery.hoverWithMediaCircle(".target" , {
-    images:["https://i.postimg.cc/QMYPc2MT/k.jpg"," ", "https://img.freepik.com/premium-photo/colorful-abstract-background-with-lots-different-colored-shapes-colors-it-generative-ai_97167-9340.jpg", " "],
+    images:["https://i.postimg.cc/QMYPc2MT/k.jpg","", "https://img.freepik.com/premium-photo/colorful-abstract-background-with-lots-different-colored-shapes-colors-it-generative-ai_97167-9340.jpg", ""],
   });
 
+  // https://media.giphy.com/media/Qfyj11pV7m2bevTYMk/giphy-downsized-large.gif 
+
   Shery.hoverWithMediaCircle(".target" , {
-    videos: [" ","./images/1.mp4", "", "./images/3.mp4"]
+    videos: [" ","./images/1short.mp4", "", "./images/3short.mp4"]
   });
   
 
   Shery.makeMagnet(".magnet");
 
+  function isMobileDevice() {
+    return /Mobile|Android|iOS|iPhone|iPad|iPod|Windows Phone/i.test(navigator.userAgent);
+  }
 
+  if(isMobileDevice()){
+  ScrollTrigger.default({
+    snap: false,
+  })
+  }
+
+  // gsap.from("card",{
+  //     y:"1000",
+  //     opacity: "0",
+  //     ease: Power1,
+  //     duration: 0.8,
+  // });
 
   gsap.to("#fleft",{
     scrollTrigger:{
