@@ -1,3 +1,18 @@
+const videoUrls = [
+  './images/1.mp4',
+  './images/3.mp4',
+];
+
+function preloadVideos(urls) {
+  urls.forEach(url => {
+    const video = document.createElement('video');
+    video.src = url;
+    video.load();
+  });
+}
+
+preloadVideos(videoUrls);
+
 Shery.mouseFollower();
 
 Shery.hoverWithMediaCircle(".target" , {
