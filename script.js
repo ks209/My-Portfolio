@@ -79,6 +79,34 @@ Shery.hoverWithMediaCircle(".target" , {
   })
 
 
+  tl=gsap.timeline();
+
+  tl.from('#loader h1',{
+    x:40,
+    opacity:0,
+    duration: 1,
+    stagger: 0.3,
+  })
+
+  tl.to('#loader h1',{
+    opacity:0,
+    x:-40,
+    duration:1,
+  })
+
+  tl.to('#loader',{
+    opacity:0,
+    display: "none",
+    duration:1,
+  })
+
+  tl.from('h1',{
+    y:50,
+    // stagger: 0.3,
+    duration: 0.3,
+  })
+
+
 
   
     
