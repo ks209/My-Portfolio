@@ -19,7 +19,6 @@ Shery.hoverWithMediaCircle(".target" , {
     images:["https://i.postimg.cc/QMYPc2MT/k.jpg","", "https://img.freepik.com/premium-photo/colorful-abstract-background-with-lots-different-colored-shapes-colors-it-generative-ai_97167-9340.jpg", ""],
   });
 
-  // https://media.giphy.com/media/Qfyj11pV7m2bevTYMk/giphy-downsized-large.gif 
 
   Shery.hoverWithMediaCircle(".target" , {
     videos: [" ","./images/1short.mp4", "", "./images/3short.mp4"]
@@ -79,6 +78,7 @@ Shery.hoverWithMediaCircle(".target" , {
   })
 
 
+function helloloader(){
   tl=gsap.timeline();
 
   tl.from('#loader h1',{
@@ -101,11 +101,23 @@ Shery.hoverWithMediaCircle(".target" , {
   })
 
   tl.from('h1',{
-    y:50,
-    // stagger: 0.3,
-    duration: 0.3,
+    y:500,
+    stagger:0.1,
   })
+}
 
+function mobile(){
+  const loader = document.querySelector("#loader")
+
+  loader.style.opacity = 0;
+  loader.style.display = none;
+}
+
+if(isMobileDevice()){
+  mobile();
+}else{
+  helloloader();
+}
 
 
   
