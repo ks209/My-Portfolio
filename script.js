@@ -108,7 +108,6 @@ function helloloader(){
 
 function mobile(){
   const loader = document.querySelector("#loader")
-
   loader.style.opacity = 0;
   loader.style.display = none;
 }
