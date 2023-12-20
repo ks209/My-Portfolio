@@ -99,11 +99,6 @@ function helloloader(){
     display: "none",
     duration:1,
   })
-
-  tl.from('h1',{
-    y:500,
-    stagger:0.1,
-  })
 }
 
 function mobile(){
