@@ -521,7 +521,7 @@ h3::selection,::selection,a::selection,h2::selection,p::selection{
     }
     .images img{
         width: 100%;
-        height: 30vh;
+        height: 20vh;
         border: 1px solid green;
     }
     .lem h1{
@@ -545,8 +545,8 @@ h3::selection,::selection,a::selection,h2::selection,p::selection{
     }
 
     .cardimg{
-        height: 30vw;
-        width: 40vw;
+        height: 35vw;
+        width: 40vw
     }
 
     .footupper h1{

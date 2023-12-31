@@ -104,13 +104,13 @@ function helloloader(){
 function mobile(){
   const loader = document.querySelector("#loader")
   loader.style.opacity = 0;
-  loader.style.display = none;
+  loader.style.display = "none";
 }
 
-if(isMobileDevice()){
+if(isMobileDevice){
   mobile();
 }else{
-  helloloader();
+helloloader();
 }
 
 
